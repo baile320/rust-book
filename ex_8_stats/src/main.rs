@@ -3,24 +3,24 @@ fn main() {
 
     println!("the average is: {}", mean(&v));
     println!("the median is: {}", median(&mut v));
-    println!("the mode is: {}", mode(v));
+    println!("the mode is: {}", mode(&v));
 }
 
-fn mean(numbers: &Vec<isize>) -> f32 {
-    numbers.iter().sum::<isize>() as f32 / numbers.len() as f32
+fn mean(numbers: &[i32]) -> f64 {
+    return numbers.iter().sum::<i32>() as f64 / numbers.len() as f64;
 }
 
-fn median(numbers: &mut Vec<isize>) -> isize {
-    numbers.sort();
+fn median(numbers: &mut Vec<i32>) -> i32 {
+    numbers.sort_unstable();
     let mid = numbers.len() / 2;
     numbers[mid]
 }
 
-fn mode(numbers: Vec<isize>) -> isize {
+fn mode(numbers: &[i32]) -> i32 {
     use std::collections::HashMap;
 
     let mut occurrences = HashMap::new();
-    for value in &numbers {
+    for value in numbers.iter() {
         *occurrences.entry(value).or_insert(0) += 1
     }
 
