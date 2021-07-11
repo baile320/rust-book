@@ -1,0 +1,1 @@
+/home/tyler/projects/rust/rust-book/hello_macro/pancakes/target/debug/pancakes: /home/tyler/projects/rust/rust-book/hello_macro/hello_macro_derive/src/lib.rs /home/tyler/projects/rust/rust-book/hello_macro/pancakes/src/main.rs /home/tyler/projects/rust/rust-book/hello_macro/src/lib.rs
